@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="283" pageHeight="425" columnWidth="243" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41b34fb6-ebbd-4531-b8bf-e63951a790bc">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="259"/>
+	<parameter name="getReceipt" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer.`id` AS customer_id,
+     customer.`customer_id` AS customer_customer_id,
+     customer.`product_id` AS customer_product_id,
+     customer.`product_name` AS customer_product_name,
+     customer.`type` AS customer_type,
+     customer.`quantity` AS customer_quantity,
+     customer.`price` AS customer_price,
+     customer.`date` AS customer_date,
+     customer.`image` AS customer_image,
+     customer.`employee_username` AS customer_employee_username,
+     receipt.`id` AS receipt_id,
+     receipt.`customer_id` AS receipt_customer_id,
+     receipt.`total` AS receipt_total,
+     receipt.`date` AS receipt_date,
+     receipt.`employee_username` AS receipt_employee_username
+FROM
+     `customer` customer INNER JOIN
+     `receipt` receipt ON customer.`customer_id` = receipt.`customer_id`
+WHERE receipt.`customer_id`= $P{getReceipt}]]>
+	</queryString>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_customer_id" class="java.lang.Integer"/>
+	<field name="customer_product_id" class="java.lang.String"/>
+	<field name="customer_product_name" class="java.lang.String"/>
+	<field name="customer_type" class="java.lang.String"/>
+	<field name="customer_quantity" class="java.lang.Integer"/>
+	<field name="customer_price" class="java.lang.Double"/>
+	<field name="customer_date" class="java.sql.Date"/>
+	<field name="customer_image" class="java.lang.String"/>
+	<field name="customer_employee_username" class="java.lang.String"/>
+	<field name="receipt_id" class="java.lang.Integer"/>
+	<field name="receipt_customer_id" class="java.lang.Integer"/>
+	<field name="receipt_total" class="java.lang.Double"/>
+	<field name="receipt_date" class="java.sql.Date"/>
+	<field name="receipt_employee_username" class="java.lang.String"/>
+	<group name="Total">
+		<groupExpression><![CDATA[$F{customer_id}]]></groupExpression>
+		<groupFooter>
+			<band height="50">
+				<staticText>
+					<reportElement x="120" y="20" width="60" height="11" uuid="6882238a-0927-4bef-a115-f09e50b5c560"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Total : ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="183" y="20" width="60" height="11" uuid="983a4814-28b3-406c-bab9-555f94ffab5c"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receipt_total}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="18" width="156" height="20" uuid="ae83435b-0977-42f0-9084-e3ea53ab3312"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="15" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Ayoub's Cafe Shop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="86" height="12" uuid="bcb374f3-70a1-465c-bb21-d9ec4ab5d0f6"/>
+				<textElement textAlignment="Right">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Customer ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="183" y="0" width="73" height="12" uuid="bc68da4b-cdf1-4108-994e-30ff32beda9f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="61" height="23" uuid="f11cf69e-f2b8-4545-84b2-f3c7dd4e4a5b"/>
+				<textElement textAlignment="Center">
+					<font size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="21" width="61" height="23" uuid="791d5094-43a5-4ec4-b08e-dd5e4b15dc74"/>
+				<textElement textAlignment="Center">
+					<font size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="21" width="61" height="23" uuid="cdc67381-109e-425d-8eee-1dd92abeba2d"/>
+				<textElement textAlignment="Center">
+					<font size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Qyantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="21" width="63" height="23" uuid="918e2bcb-084e-473e-b68f-c3cec583be57"/>
+				<textElement textAlignment="Center">
+					<font size="7" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Price ($)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="8" width="243" height="1" uuid="603faee3-8a05-4074-8d74-ce40e93f9292"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="43" width="243" height="1" uuid="51535eb0-e5fc-4154-97e7-ce1656520baa"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="61" height="10" uuid="51d5011f-70c5-4602-bf6c-73e5cbddce9d"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_product_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="61" height="10" uuid="0fe10c65-e653-4886-8d8c-7abaa46d749f"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="61" height="10" uuid="566cc6e3-3eaa-4ee6-84d4-1aa00688fad5"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="63" height="10" uuid="bb4aa340-164f-454c-8500-77f7747d7c29"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_price}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="13" width="243" height="1" uuid="5ef0dd97-8123-41ba-b47d-d1f9fcd193b1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="17" width="150" height="23" uuid="d3201482-ea4d-497e-824a-608ec59c7cf5"/>
+				<text><![CDATA[Thank you for your Order!]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="120" y="40" width="123" height="14" uuid="76b18b20-8129-4c0f-a259-62ebf074ee39"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

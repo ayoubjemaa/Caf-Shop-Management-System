@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 28, 2024, 1:55:41 PM
+    Author     : PRO BOOK
+*/
+.gradient
+{
+    -fx-background-color: linear-gradient(to bottom right,#0f6789,#286155);
+}
+.white
+{
+    -fx-background-color: #fff;
+}
+.head-label
+{
+    -fx-border-color: #286155;
+    -fx-border-width: 0 0 0 3px;
+    -fx-padding: 0 0 0 5px;
+}
+.login-btn
+{
+    -fx-background-color: linear-gradient(to bottom right,#098c53,#246861);
+    -fx-background-radius: 5px;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px; 
+    -fx-cursor: hand;
+}
+.login-btn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #0fb565, #399a8f);
+}
+.textfield
+{
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right,#0f6789,#286155);
+    -fx-border-width: .5px;
+}
+.textfield:focused
+{
+    -fx-border-width: 1.2px;
+}
+.create-btn
+{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-border-color: #fff;
+    -fx-border-width:1px;
+}
+.create-btn:hover
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}

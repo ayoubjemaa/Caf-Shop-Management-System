@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="card_form" prefHeight="180.0" prefWidth="230.0" stylesheets="@cardDesign.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafeshopmanagementsys.cardProductController">
+   <children>
+      <VBox layoutX="6.0" layoutY="9.0" prefHeight="180.0" prefWidth="230.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="230.0">
+               <children>
+                  <Label fx:id="prod_name" prefHeight="21.0" prefWidth="150.0" text="Spaghetti">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="prod_price" alignment="TOP_RIGHT" prefHeight="21.0" prefWidth="85.0" text="\$0.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="105.0" prefWidth="230.0">
+               <children>
+                  <ImageView fx:id="prod_imageView" fitHeight="92.0" fitWidth="203.0" layoutX="13.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="230.0">
+               <children>
+                  <Spinner fx:id="prod_spinner" prefHeight="25.0" prefWidth="115.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Spinner>
+                  <Button fx:id="prod_addBtn" mnemonicParsing="false" onAction="#addBtn" prefHeight="25.0" prefWidth="59.0" styleClass="btn" stylesheets="@cardDesign.css" text="Add" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="card" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>
