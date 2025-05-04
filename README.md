@@ -18,6 +18,7 @@ Avant de commencer l'installation, assurez-vous d'avoir les outils suivants inst
 ---
 
 ## 🚀 Application Setup
+---
  1. Cloner le dépôt
 Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
 ```
