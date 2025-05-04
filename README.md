@@ -170,34 +170,41 @@ Téléchargez le connecteur JDBC pour MariaDB ou MySQL et ajoutez-le à votre pr
 
 📂 Structure du projet 
 
+# CafeShopManagementSys
+
+## Structure du projet
+
+### Répertoires principaux
+
+```bash
 CafeShopManagementSys/
 ├── src/
 │   └── main/
 │       ├── java/
 │       │   └── cafeshopmanagementsys/
-│       │       ├── CafeShopManagementSys.java          // Classe principale (main)
-│       │       ├── CustomersData.java                  // Modèle pour les données clients
-│       │       ├── ProductData.java                    // Modèle pour les données produits
-│       │       ├── DataBase.java                       // Gestion de la base de données
-│       │       ├── FXMLDocumentController.java         // Contrôleur pour l'authentification
-│       │       ├── mainFormController.java             // Contrôleur de l'interface principale
-│       │       ├── RecuController.java                 // Contrôleur pour les reçus
-│       │       └── cardProductController.java          // Contrôleur des cartes de produits
+│       │       ├── CafeShopManagementSys.java        # Classe principale (point d'entrée)
+│       │       ├── CustomersData.java                # Modèle des données clients
+│       │       ├── ProductData.java                  # Modèle des données produits
+│       │       ├── DataBase.java                     # Gestion de la base de données
+│       │       ├── FXMLDocumentController.java       # Contrôleur de l'authentification
+│       │       ├── mainFormController.java           # Contrôleur de l'interface principale
+│       │       ├── RecuController.java               # Contrôleur pour la génération des reçus
+│       │       └── cardProductController.java        # Contrôleur des cartes de produits
 │       └── resources/
-│           ├── FXMLDocument.fxml                       // Vue de l'authentification
-│           ├── mainForm.fxml                           // Vue principale
-│           ├── recu.fxml                               // Vue des reçus
-│           ├── cardProduct.fxml                        // Vue des cartes de produits
-│           ├── LoginDesign.css                         // Styles pour l'authentification
-│           ├── mainFormDesign.css                      // Styles de l'interface principale
-│           ├── cardDesign.css                          // Styles des cartes de produits
-│           └── report.jrxml                            // Template JasperReports
+│           ├── FXMLDocument.fxml                    # Vue de l'authentification
+│           ├── mainForm.fxml                        # Vue principale de l'application
+│           ├── recu.fxml                            # Vue des reçus
+│           ├── cardProduct.fxml                     # Vue des cartes de produits
+│           ├── LoginDesign.css                      # Styles pour la page d'authentification
+│           ├── mainFormDesign.css                  # Styles de l'interface principale
+│           ├── cardDesign.css                      # Styles des cartes de produits
+│           └── report.jrxml                        # Template JasperReports pour l'impression des reçus
 ├── test/
-│   └── java/                                           // Tests unitaires (non structurés)
+│   └── java/                                       # Tests unitaires (non structurés pour l'instant)
 ├── lib/
-│   ├── mysql-connector-java-5.1.48.jar                 // Pilote MySQL
-│   ├── ojdbc14-10.2.0.2.0.jar                          // Pilote Oracle
-│   └── fontawesomefx-8.2.jar                           // Icônes FontAwesome
-└── target/                                             // Dossier de compilation (généré)
+│   ├── mysql-connector-java-5.1.48.jar             # Pilote MySQL pour la connexion à la base de données
+│   ├── ojdbc14-10.2.0.2.0.jar                     # Pilote Oracle pour la connexion à la base de données
+│   └── fontawesomefx-8.2.jar                       # Icônes FontAwesome pour l'interface utilisateur
+└── target/                                         # Dossier de compilation (généré automatiquement)
 
 
