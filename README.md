@@ -18,7 +18,6 @@ Avant de commencer l'installation, assurez-vous d'avoir les outils suivants inst
 ---
 
 ## 🚀 Application Setup
----
  1. Cloner le dépôt
 Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
 ```
@@ -90,7 +89,7 @@ Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 po
 L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
 
 
-
+---
 ##📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
@@ -196,6 +195,7 @@ Permet un suivi par employé/caissier.
 ![image](https://github.com/user-attachments/assets/561f46f4-1c2b-42a2-b716-0356c881604a)
 
 
+---
 
 ##🛠️ Les technologies utilisées : 
 
@@ -255,8 +255,7 @@ Dans phpMyAdmin, vous pouvez utiliser l'onglet SQL pour entrer et exécuter des 
 
 7. Utiliser JDBC pour connecter Java à la base de données 🔗
 Téléchargez le connecteur JDBC pour MariaDB ou MySQL et ajoutez-le à votre projet Java.
-
-
+---
 ##📂 Structure du projet 
 ```bash
 CafeShopManagementSys/
@@ -289,6 +288,8 @@ CafeShopManagementSys/
 │   └── fontawesomefx-8.2.jar                       # Icônes FontAwesome pour l'interface utilisateur
 └── target/                                         # Dossier de compilation (généré automatiquement)
 ```
+---
+
 🔍 Les diagrammes de classes : 
 ```
 +────────────+       +────────────+       +─────────────+
@@ -312,6 +313,7 @@ CafeShopManagementSys/
 +────────────+                              +──────────────────+
 
 ```
+---
 
 ##💻 Usage
 Voici comment utiliser les différentes fonctionnalités de l'application Cafe Shop Management System :
