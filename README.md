@@ -20,13 +20,12 @@ Avant de commencer l'installation, assurez-vous d'avoir les outils suivants inst
 ## 🚀 Application Setup
  1. Cloner le dépôt
 Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
-```bash
+```
 git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
 ````
 📂 Répertoire du projet cloné :
 Une fois le projet cloné, naviguez dans le dossier du projet avec cette commande :
 ````
-bash
 cd CafeShopManagementSys
 ````
 2. Installer les dépendances
@@ -35,13 +34,11 @@ Si vous utilisez un gestionnaire de dépendances comme Maven ou Gradle, vous dev
 
 Maven :
 ```
-bash
 mvn install
 ````
 
 Gradle :
 ```
-bash
 gradle build
 ```
 
@@ -65,7 +62,6 @@ MySQL : Créez une base de données et configurez-la dans le fichier DataBase.ja
 Oracle : Assurez-vous que la connexion à la base de données est correcte dans DataBase.java.
 Mise a jour la connection aux paramétres MySQL :
 ````
-bash
 db.url=jdbc:mysql://localhost:3306/rentcar
 db.user=your_username
 db.password=your_password
@@ -81,7 +77,6 @@ Sous l'onglet Project, définissez la version du JDK.
 5. Lancer l'application
    
 ```
-bash
 mvn javafx:run
 ```
 Une fois toutes les étapes précédentes effectuées, vous pouvez exécuter l'application.
@@ -95,7 +90,7 @@ L'application devrait maintenant démarrer avec l'interface de connexion (FXML).
 
 
 
-📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
+##📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
 
@@ -201,7 +196,7 @@ Permet un suivi par employé/caissier.
 
 
 
-🛠️ Les technologies utilisées : 
+##🛠️ Les technologies utilisées : 
 
 
 1. Back-End :
@@ -261,14 +256,7 @@ Dans phpMyAdmin, vous pouvez utiliser l'onglet SQL pour entrer et exécuter des 
 Téléchargez le connecteur JDBC pour MariaDB ou MySQL et ajoutez-le à votre projet Java.
 
 
-📂 Structure du projet 
-
-# CafeShopManagementSys
-
-## Structure du projet
-
-### Répertoires principaux
-
+##📂 Structure du projet 
 ```bash
 CafeShopManagementSys/
 ├── src/
@@ -299,6 +287,102 @@ CafeShopManagementSys/
 │   ├── ojdbc14-10.2.0.2.0.jar                     # Pilote Oracle pour la connexion à la base de données
 │   └── fontawesomefx-8.2.jar                       # Icônes FontAwesome pour l'interface utilisateur
 └── target/                                         # Dossier de compilation (généré automatiquement)
+```
+🔍 Les diagrammes de classes : 
+```
++────────────+       +────────────+       +─────────────+
+|  customer  |       |  receipt   |       |  product    |
++────────────+       +────────────+       +─────────────+
+| customer_id|◄─────►| receipt_id |       | product_id  |
+| name       |       | customer_id|◄─┐    | name        |
+| email      |       | employee_id│  │    | price       |
+| phone      |       | date       │  │    | stock       |
+| address    |       | total_amount┘  │    | category    |
++────────────+       +────────────+    │    +─────────────+
+                                       │
++────────────+                         │    +──────────────────+
+|  employee  |                         └───►| receipt_details  |
++────────────+                              +──────────────────+
+| employee_id|◄─────────────────────────────| receipt_id       |
+| first_name |                              | product_id       |
+| last_name  |                              | quantity         |
+| role       |                              | unit_price       |
+| hire_date  |                              | subtotal         |
++────────────+                              +──────────────────+
 
+```
 
-````
+##💻 Usage
+Voici comment utiliser les différentes fonctionnalités de l'application Cafe Shop Management System :
+
+🔐 Connexion
+Lancez l’application via l’interface principale.
+
+Connectez-vous avec votre nom d'utilisateur (admin ou caissier).
+
+🧭 Tableau de bord (Dashboard)
+Visualisez :
+
+Le revenu total
+
+Le nombre de clients servis
+
+Le nombre total de produits vendus
+
+Le revenu du jour
+
+Analysez les graphiques :
+
+📈 Income Chart : évolution des revenus par date.
+
+👤 Customer's Chart : fréquentation des clients.
+
+📦 Gestion de l’inventaire (Inventory)
+Affiche tous les produits disponibles dans le café.
+
+Pour chaque produit :
+
+📝 Modifier ses informations (nom, prix, stock…)
+
+➕ Ajouter un nouveau produit
+
+🗑️ Supprimer un produit
+
+🖼️ Voir son image
+
+Les changements sont automatiquement enregistrés dans la base de données.
+
+🍽️ Menu (Commande client)
+Ajoutez les produits à la commande via des cartes produit affichées dynamiquement.
+
+Sélectionnez la quantité et ajoutez au panier.
+
+Le système calcule automatiquement le total.
+
+Cliquez sur "Save Order" pour enregistrer la commande.
+
+Cliquez sur "Print Receipt" pour imprimer un reçu avec les détails.
+
+👥 Clients (Customers)
+Consultez la liste des clients ayant passé commande.
+
+Visualisez :
+
+Leur identifiant
+
+Les montants payés
+
+Seuls les clients liés à l’utilisateur connecté (admin/caissier) sont visibles.
+
+🧾 Reçu
+Après avoir passé une commande, vous pouvez imprimer un reçu :
+
+Liste des produits commandés
+
+Quantité, type, prix
+
+Total de la commande
+
+ID du client
+
+Date et heure de l’impression (fixe)
