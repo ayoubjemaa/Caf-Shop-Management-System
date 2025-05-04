@@ -2,6 +2,29 @@
 
 Projet Universitqre Application desktop Java pour la gestion d’un café, avec interface JavaFX (utilisant outils scene builder ), gestion des commandes et stock, tableaux de bord analytiques, architecture orientée objet, base de données MariaDB via XAMPP, et communication client-serveur via JDBC.
 
+## Prérequis
+
+Avant de commencer l'installation, assurez-vous d'avoir les outils suivants installés sur votre machine :
+
+- **Git** : Pour cloner le dépôt depuis GitHub.
+  - Téléchargez et installez Git depuis [git-scm.com](https://git-scm.com/).
+- **Java Development Kit (JDK)** : Version 8 ou supérieure recommandée.
+  - Téléchargez et installez le JDK depuis [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) ou via un gestionnaire de paquets.
+- **IDE Java** : Par exemple, IntelliJ IDEA, Eclipse ou NetBeans.
+- **Base de données MySQL ou Oracle** : Selon la configuration de votre projet.
+  - MySQL : [Télécharger MySQL](https://dev.mysql.com/downloads/).
+  - Oracle : [Télécharger Oracle DB](https://www.oracle.com/database/technologies/).
+
+---
+
+## 🚀 Application Setup
+
+### 1. **Cloner le dépôt**
+
+Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
+
+```bash
+git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
 📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
@@ -207,4 +230,14 @@ CafeShopManagementSys/
 │   └── fontawesomefx-8.2.jar                       # Icônes FontAwesome pour l'interface utilisateur
 └── target/                                         # Dossier de compilation (généré automatiquement)
 
+
+---
+## 🚀 Application Setup
+
+### 1. **Cloner le dépôt**
+
+Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
+
+```bash
+git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
 
