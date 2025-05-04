@@ -90,7 +90,7 @@ L'application devrait maintenant démarrer avec l'interface de connexion (FXML).
 
 
 ---
-##📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
+## 📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
 
@@ -197,7 +197,7 @@ Permet un suivi par employé/caissier.
 
 ---
 
-##🛠️ Les technologies utilisées : 
+## 🛠️ Les technologies utilisées : 
 
 
 1. Back-End :
@@ -256,7 +256,7 @@ Dans phpMyAdmin, vous pouvez utiliser l'onglet SQL pour entrer et exécuter des 
 7. Utiliser JDBC pour connecter Java à la base de données 🔗
 Téléchargez le connecteur JDBC pour MariaDB ou MySQL et ajoutez-le à votre projet Java.
 ---
-##📂 Structure du projet 
+## 📂 Structure du projet 
 ```bash
 CafeShopManagementSys/
 ├── src/
@@ -290,7 +290,7 @@ CafeShopManagementSys/
 ```
 ---
 
-🔍 Les diagrammes de classes : 
+### 🔍 Les diagrammes de classes : 
 ```
 +────────────+       +────────────+       +─────────────+
 |  customer  |       |  receipt   |       |  product    |
@@ -315,7 +315,7 @@ CafeShopManagementSys/
 ```
 ---
 
-##💻 Usage
+## 💻 Usage
 Voici comment utiliser les différentes fonctionnalités de l'application Cafe Shop Management System :
 
 🔐 Connexion
