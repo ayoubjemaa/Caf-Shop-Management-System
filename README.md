@@ -2,94 +2,7 @@
 
 Projet Universitqre Application desktop Java pour la gestion d’un café, avec interface JavaFX (utilisant outils scene builder ), gestion des commandes et stock, tableaux de bord analytiques, architecture orientée objet, base de données MariaDB via XAMPP, et communication client-serveur via JDBC.
 
-## Prérequis
 
-Avant de commencer l'installation, assurez-vous d'avoir les outils suivants installés sur votre machine :
-
-- **Git** : Pour cloner le dépôt depuis GitHub.
-  - Téléchargez et installez Git depuis [git-scm.com](https://git-scm.com/).
-- **Java Development Kit (JDK)** : Version 8 ou supérieure recommandée.
-  - Téléchargez et installez le JDK depuis [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) ou via un gestionnaire de paquets.
-- **IDE Java** : Par exemple, IntelliJ IDEA, Eclipse ou NetBeans.
-- **Base de données MySQL ou Oracle** : Selon la configuration de votre projet.
-  - MySQL : [Télécharger MySQL](https://dev.mysql.com/downloads/).
-  - Oracle : [Télécharger Oracle DB](https://www.oracle.com/database/technologies/).
-
----
-
-## 🚀 Application Setup
- 1. Cloner le dépôt
-Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
-```
-git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
-````
-📂 Répertoire du projet cloné :
-Une fois le projet cloné, naviguez dans le dossier du projet avec cette commande :
-````
-cd CafeShopManagementSys
-````
-2. Installer les dépendances
-a) Dépendances Java
-Si vous utilisez un gestionnaire de dépendances comme Maven ou Gradle, vous devez installer les dépendances du projet.
-
-Maven :
-```
-mvn install
-````
-
-Gradle :
-```
-gradle build
-```
-
-Cela permet d'installer toutes les dépendances nécessaires pour exécuter le projet.
-b) Pilotes de base de données
-
-Le projet nécessite les pilotes pour MySQL ou Oracle. Les fichiers sont présents dans le dossier lib/, mais vous pouvez les télécharger manuellement si nécessaire.
-
-MySQL Connector/J : mysql-connector-java-5.1.48.jar
-
-Oracle JDBC Driver : ojdbc14-10.2.0.2.0.jar
-
-Téléchargez-les à partir des liens suivants :
-MySQL Connector/J
-Oracle JDBC Driver
-
-3. Configurer la base de données
-   
-Pour que l'application fonctionne correctement, vous devez configurer la base de données :
-MySQL : Créez une base de données et configurez-la dans le fichier DataBase.java.
-Oracle : Assurez-vous que la connexion à la base de données est correcte dans DataBase.java.
-Mise a jour la connection aux paramétres MySQL :
-````
-db.url=jdbc:mysql://localhost:3306/rentcar
-db.user=your_username
-db.password=your_password
-````
-
-4. Configurer l'IDE
-   
-Assurez-vous que votre JDK est bien configuré dans votre IDE (par exemple IntelliJ IDEA, Eclipse) :
-Dans IntelliJ IDEA :
-Allez dans File > Project Structure.
-Sous l'onglet Project, définissez la version du JDK.
-
-5. Lancer l'application
-   
-```
-mvn javafx:run
-```
-Une fois toutes les étapes précédentes effectuées, vous pouvez exécuter l'application.
-Dans IntelliJ IDEA :
-Ouvrez le fichier CafeShopManagementSys.java situé dans le dossier src/main/java/cafeshopmanagementsys/.
-Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 pour démarrer l'application.
-
-6. Tester l'application
-   
-L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
-
-
----
 ## 📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
@@ -324,68 +237,131 @@ Lancez l’application via l’interface principale.
 Connectez-vous avec votre nom d'utilisateur (admin ou caissier).
 
 🧭 Tableau de bord (Dashboard)
+
 Visualisez :
-
 Le revenu total
-
 Le nombre de clients servis
-
 Le nombre total de produits vendus
-
 Le revenu du jour
-
 Analysez les graphiques :
-
 📈 Income Chart : évolution des revenus par date.
-
 👤 Customer's Chart : fréquentation des clients.
-
 📦 Gestion de l’inventaire (Inventory)
 Affiche tous les produits disponibles dans le café.
 
 Pour chaque produit :
-
 📝 Modifier ses informations (nom, prix, stock…)
-
 ➕ Ajouter un nouveau produit
-
 🗑️ Supprimer un produit
-
 🖼️ Voir son image
-
 Les changements sont automatiquement enregistrés dans la base de données.
 
 🍽️ Menu (Commande client)
+
 Ajoutez les produits à la commande via des cartes produit affichées dynamiquement.
-
 Sélectionnez la quantité et ajoutez au panier.
-
 Le système calcule automatiquement le total.
-
 Cliquez sur "Save Order" pour enregistrer la commande.
-
 Cliquez sur "Print Receipt" pour imprimer un reçu avec les détails.
 
 👥 Clients (Customers)
+
 Consultez la liste des clients ayant passé commande.
-
 Visualisez :
-
 Leur identifiant
-
 Les montants payés
-
 Seuls les clients liés à l’utilisateur connecté (admin/caissier) sont visibles.
-
 🧾 Reçu
 Après avoir passé une commande, vous pouvez imprimer un reçu :
-
 Liste des produits commandés
-
 Quantité, type, prix
-
 Total de la commande
-
 ID du client
-
 Date et heure de l’impression (fixe)
+## Prérequis
+
+Avant de commencer l'installation, assurez-vous d'avoir les outils suivants installés sur votre machine :
+
+- **Git** : Pour cloner le dépôt depuis GitHub.
+  - Téléchargez et installez Git depuis [git-scm.com](https://git-scm.com/).
+- **Java Development Kit (JDK)** : Version 8 ou supérieure recommandée.
+  - Téléchargez et installez le JDK depuis [Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) ou via un gestionnaire de paquets.
+- **IDE Java** : Par exemple, IntelliJ IDEA, Eclipse ou NetBeans.
+- **Base de données MySQL ou Oracle** : Selon la configuration de votre projet.
+  - MySQL : [Télécharger MySQL](https://dev.mysql.com/downloads/).
+  - Oracle : [Télécharger Oracle DB](https://www.oracle.com/database/technologies/).
+
+---
+
+## 🚀 Application Setup
+ 1. Cloner le dépôt
+Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
+```
+git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
+````
+📂 Répertoire du projet cloné :
+Une fois le projet cloné, naviguez dans le dossier du projet avec cette commande :
+````
+cd CafeShopManagementSys
+````
+2. Installer les dépendances
+a) Dépendances Java
+Si vous utilisez un gestionnaire de dépendances comme Maven ou Gradle, vous devez installer les dépendances du projet.
+
+Maven :
+```
+mvn install
+````
+
+Gradle :
+```
+gradle build
+```
+
+Cela permet d'installer toutes les dépendances nécessaires pour exécuter le projet.
+b) Pilotes de base de données
+
+Le projet nécessite les pilotes pour MySQL ou Oracle. Les fichiers sont présents dans le dossier lib/, mais vous pouvez les télécharger manuellement si nécessaire.
+
+MySQL Connector/J : mysql-connector-java-5.1.48.jar
+
+Oracle JDBC Driver : ojdbc14-10.2.0.2.0.jar
+
+Téléchargez-les à partir des liens suivants :
+MySQL Connector/J
+Oracle JDBC Driver
+
+3. Configurer la base de données
+   
+Pour que l'application fonctionne correctement, vous devez configurer la base de données :
+MySQL : Créez une base de données et configurez-la dans le fichier DataBase.java.
+Oracle : Assurez-vous que la connexion à la base de données est correcte dans DataBase.java.
+Mise a jour la connection aux paramétres MySQL :
+````
+db.url=jdbc:mysql://localhost:3306/rentcar
+db.user=your_username
+db.password=your_password
+````
+
+4. Configurer l'IDE
+   
+Assurez-vous que votre JDK est bien configuré dans votre IDE (par exemple IntelliJ IDEA, Eclipse) :
+Dans IntelliJ IDEA :
+Allez dans File > Project Structure.
+Sous l'onglet Project, définissez la version du JDK.
+
+5. Lancer l'application
+   
+```
+mvn javafx:run
+```
+Une fois toutes les étapes précédentes effectuées, vous pouvez exécuter l'application.
+Dans IntelliJ IDEA :
+Ouvrez le fichier CafeShopManagementSys.java situé dans le dossier src/main/java/cafeshopmanagementsys/.
+Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 pour démarrer l'application.
+
+6. Tester l'application
+   
+L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
+
+
