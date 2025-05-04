@@ -108,4 +108,96 @@ Permet un suivi par employé/caissier.
 
 
 
+🛠️ Les technologies utilisées : 
+
+
+1. Back-End :
+
+Java : Pour la logique métier et les services back-end.
+JDBC (Java Database Connectivity) : Pour la connexion à la base de données SQL.
+
+2. Front-End :
+   
+JavaFX : Pour créer des interfaces utilisateur modernes et interactives en Java.
+Scene Builder : Pour concevoir visuellement les interfaces utilisateur JavaFX.
+FXML : Pour décrire la structure de l'interface utilisateur (lié à Scene Builder).
+
+3. Base de Données :
+   
+MySQL (ou une autre base relationnelle) : Pour stocker les données.
+JDBC : Pour la connexion Java à la base de données.
+
+4. Bibliothèques Additionnelles (fichiers JAR) :
+   
+SQL Connector JDBC : Pour connecter Java à MySQL (ou autre).
+Font-Awesome : Pour les icônes.
+
+🔧 Configuration de la base de données  : 
+
+1. Installation de XAMPP 🔧
+Installez XAMPP depuis le site officiel.
+
+Lancez les services Apache 🌐 et MySQL 🗄️ via le panneau de contrôle XAMPP.
+
+2. Accéder à phpMyAdmin 🖥️
+Ouvrez votre navigateur et allez sur http://localhost/phpmyadmin/ pour accéder à phpMyAdmin.
+
+3. Créer une base de données ➕
+Dans phpMyAdmin, allez dans l'onglet Bases de données.
+
+Entrez un nom pour votre base de données (par exemple, cafe_shop_db) et cliquez sur Créer.
+
+4. Créer les tables 🏗️
+Sélectionnez la base de données nouvellement créée.
+
+Cliquez sur Nouvelle pour créer une nouvelle table.
+
+Définissez le nom de la table et le nombre de colonnes.
+
+Entrez les détails de chaque colonne (nom, type de données, longueur, etc.) et cliquez sur Enregistrer.
+
+5. Insérer des données 💾
+Après la création des tables, cliquez sur Insérer pour ajouter des données dans les tables.
+
+Remplissez les champs avec les données nécessaires et cliquez sur Exécuter.
+
+6. Exécuter des requêtes SQL ⚙️
+Dans phpMyAdmin, vous pouvez utiliser l'onglet SQL pour entrer et exécuter des requêtes SQL, comme SELECT, INSERT, UPDATE, et DELETE.
+
+7. Utiliser JDBC pour connecter Java à la base de données 🔗
+Téléchargez le connecteur JDBC pour MariaDB ou MySQL et ajoutez-le à votre projet Java.
+
+
+📂 Structure du projet 
+
+CafeShopManagementSys/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── cafeshopmanagementsys/
+│       │       ├── CafeShopManagementSys.java          // Classe principale (main)
+│       │       ├── CustomersData.java                  // Modèle pour les données clients
+│       │       ├── ProductData.java                    // Modèle pour les données produits
+│       │       ├── DataBase.java                       // Gestion de la base de données
+│       │       ├── FXMLDocumentController.java         // Contrôleur pour l'authentification
+│       │       ├── mainFormController.java             // Contrôleur de l'interface principale
+│       │       ├── RecuController.java                 // Contrôleur pour les reçus
+│       │       └── cardProductController.java          // Contrôleur des cartes de produits
+│       └── resources/
+│           ├── FXMLDocument.fxml                       // Vue de l'authentification
+│           ├── mainForm.fxml                           // Vue principale
+│           ├── recu.fxml                               // Vue des reçus
+│           ├── cardProduct.fxml                        // Vue des cartes de produits
+│           ├── LoginDesign.css                         // Styles pour l'authentification
+│           ├── mainFormDesign.css                      // Styles de l'interface principale
+│           ├── cardDesign.css                          // Styles des cartes de produits
+│           └── report.jrxml                            // Template JasperReports
+├── test/
+│   └── java/                                           // Tests unitaires (non structurés)
+├── lib/
+│   ├── mysql-connector-java-5.1.48.jar                 // Pilote MySQL
+│   ├── ojdbc14-10.2.0.2.0.jar                          // Pilote Oracle
+│   └── fontawesomefx-8.2.jar                           // Icônes FontAwesome
+└── target/                                             // Dossier de compilation (généré)
+
 
