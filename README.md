@@ -13,9 +13,25 @@ interface forget password :
 
 ![image](https://github.com/user-attachments/assets/33ddb110-03b6-4c81-a63d-9725af0bb8d4)
 
-dashbaord interface: 
+🔷 1. Dashboard (Tableau de bord)
+
+Objectif : Fournir un aperçu statistique de l’activité du café.
+Fonctions principales :
+**Income Chart (Graphique des revenus) :
+Affiche les revenus journaliers ou sur une période choisie.
+Permet d’analyser les pics d’activité.
+**Customer's Chart (Graphique des clients) :
+Montre le nombre de clients servis chaque jour.
+Permet de suivre la fréquentation du café selon les jours.
+
+Indicateurs affichés :
+🔹 Total des revenus générés (total income)
+🔹 Nombre total de clients servis
+🔹 Nombre total de produits vendus
+🔹 Revenu du jour courant (today's income)
 
 ![image](https://github.com/user-attachments/assets/390bb648-8636-4010-9bdf-f793817ca9d4)
+
 
 inventory interface : 
 
