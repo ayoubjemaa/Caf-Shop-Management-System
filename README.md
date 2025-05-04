@@ -363,5 +363,10 @@ Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 po
 6. Tester l'application
    
 L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
+---
+
+## 📜 Licence
+MIT © Ayoub Jemaa
+License
 
 
