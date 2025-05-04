@@ -59,31 +59,38 @@ MySQL Connector/J
 Oracle JDBC Driver
 
 3. Configurer la base de données
-4. 
+   
 Pour que l'application fonctionne correctement, vous devez configurer la base de données :
 MySQL : Créez une base de données et configurez-la dans le fichier DataBase.java.
 Oracle : Assurez-vous que la connexion à la base de données est correcte dans DataBase.java.
+Mise a jour la connection aux paramétres MySQL :
+````
+bash
+db.url=jdbc:mysql://localhost:3306/rentcar
+db.user=your_username
+db.password=your_password
+````
 
-5. Configurer l'IDE
-6. 
+4. Configurer l'IDE
+   
 Assurez-vous que votre JDK est bien configuré dans votre IDE (par exemple IntelliJ IDEA, Eclipse) :
-
 Dans IntelliJ IDEA :
-
 Allez dans File > Project Structure.
-
 Sous l'onglet Project, définissez la version du JDK.
 
 5. Lancer l'application
+   
+```
+bash
+mvn javafx:run
+```
 Une fois toutes les étapes précédentes effectuées, vous pouvez exécuter l'application.
-
 Dans IntelliJ IDEA :
-
 Ouvrez le fichier CafeShopManagementSys.java situé dans le dossier src/main/java/cafeshopmanagementsys/.
-
 Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 pour démarrer l'application.
 
 6. Tester l'application
+   
 L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
 
 
@@ -294,13 +301,4 @@ CafeShopManagementSys/
 └── target/                                         # Dossier de compilation (généré automatiquement)
 
 
----
-## 🚀 Application Setup
-
-### 1. **Cloner le dépôt**
-
-Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
-
-```bash
-git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
-
+````
