@@ -18,13 +18,76 @@ Avant de commencer l'installation, assurez-vous d'avoir les outils suivants inst
 ---
 
 ## 🚀 Application Setup
-
-### 1. **Cloner le dépôt**
-
+ 1. Cloner le dépôt
 Tout d'abord, clonez le projet depuis GitHub. Ouvrez votre terminal et exécutez la commande suivante :
-
 ```bash
 git clone https://github.com/votre-utilisateur/CafeShopManagementSys.git
+````
+📂 Répertoire du projet cloné :
+Une fois le projet cloné, naviguez dans le dossier du projet avec cette commande :
+````
+bash
+cd CafeShopManagementSys
+````
+2. Installer les dépendances
+a) Dépendances Java
+Si vous utilisez un gestionnaire de dépendances comme Maven ou Gradle, vous devez installer les dépendances du projet.
+
+Maven :
+```
+bash
+mvn install
+````
+
+Gradle :
+```
+bash
+gradle build
+```
+
+Cela permet d'installer toutes les dépendances nécessaires pour exécuter le projet.
+b) Pilotes de base de données
+
+Le projet nécessite les pilotes pour MySQL ou Oracle. Les fichiers sont présents dans le dossier lib/, mais vous pouvez les télécharger manuellement si nécessaire.
+
+MySQL Connector/J : mysql-connector-java-5.1.48.jar
+
+Oracle JDBC Driver : ojdbc14-10.2.0.2.0.jar
+
+Téléchargez-les à partir des liens suivants :
+MySQL Connector/J
+Oracle JDBC Driver
+
+3. Configurer la base de données
+4. 
+Pour que l'application fonctionne correctement, vous devez configurer la base de données :
+MySQL : Créez une base de données et configurez-la dans le fichier DataBase.java.
+Oracle : Assurez-vous que la connexion à la base de données est correcte dans DataBase.java.
+
+5. Configurer l'IDE
+6. 
+Assurez-vous que votre JDK est bien configuré dans votre IDE (par exemple IntelliJ IDEA, Eclipse) :
+
+Dans IntelliJ IDEA :
+
+Allez dans File > Project Structure.
+
+Sous l'onglet Project, définissez la version du JDK.
+
+5. Lancer l'application
+Une fois toutes les étapes précédentes effectuées, vous pouvez exécuter l'application.
+
+Dans IntelliJ IDEA :
+
+Ouvrez le fichier CafeShopManagementSys.java situé dans le dossier src/main/java/cafeshopmanagementsys/.
+
+Cliquez sur le bouton "Run" ou utilisez la combinaison de touches Shift + F10 pour démarrer l'application.
+
+6. Tester l'application
+L'application devrait maintenant démarrer avec l'interface de connexion (FXML). Vous pourrez vous connecter et interagir avec l'interface de gestion des produits, des clients et des ventes.
+
+
+
 📸 Des captures d'écran sur les différentes interfaces graphiques de l'application :
 
 I/Les interface d'authentification :
